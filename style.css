@@ -1,0 +1,47 @@
+* { 
+    box-sizing: border-box; 
+  }
+  
+  body { 
+    font-family: sans-serif; 
+  }
+  
+  .carousel {
+    background:#EEE;
+  }
+  
+  h5, h1{
+    text-align: center;
+    color: orange;
+  }
+  
+  .carousel-cell {
+    width: 66%;
+    height: 400px;
+    margin-right: 10px;
+    text-align: center;
+    counter-increment: carousel-cell;
+  }
+  
+  .carousel-cell:before {
+    display: block;
+    text-align: center;
+    content: counter(carousel-cell);
+    color:red;
+  }
+  
+  .carousel-cell-image {
+    display: block;
+    max-height: 100%;
+    margin: 0 auto;
+    max-width: 100%;
+    opacity: 0;
+    -webkit-transition: opacity 0.4s;
+            transition: opacity 0.4s;
+  }
+  
+  .carousel-cell-image.flickity-lazyloaded,
+  .carousel-cell-image.flickity-lazyerror {
+    opacity: 1;
+  }
+  
